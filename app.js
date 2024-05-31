@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 2200;
 const app = express();
 const connectDB = require("./config/db")
-const colors = require("colors");
+// const colors = require("colors");
 
 
 
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
-const faceRouter = require('./api/face/face');
+const faceRouter = require('./face');
 
 
 
@@ -30,6 +30,6 @@ app.get('/', async (req, res) => {
 connectDB().then(() => {
 
   app.listen(PORT, () => {
-    console.log(`Server is running at ${PORT}`.green.underline);
+    console.log(`Server is running at ${PORT}`);
   });
 })

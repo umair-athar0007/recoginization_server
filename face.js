@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Face = require('../../mongoomodels/faceModel');
+const Face = require('./mongoomodels/faceModel');
 const { compareDescriptors, getFaceDescriptor , loadModels} = require("./faceHelper")
 
 
